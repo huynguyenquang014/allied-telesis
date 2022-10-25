@@ -1,0 +1,68 @@
+.c-breadcrumb {
+    margin-top: -80px;
+    position: relative;
+    @include brSpLandscape {
+        margin-bottom: 7px;
+        margin-top: -50px;
+    }
+    &__item {
+        background: $cBackground;
+        padding: 16px 30px 41px;
+        @include brSpLandscape {
+            padding: 12px 15px 41px;
+        }
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        li {
+            margin-right: 27px;
+            position: relative;
+            @include brSpLandscape {
+                margin-right: 22px;
+            }
+            &.sp {
+                display: none;
+                @include brSpLandscape {
+                    display: block;
+                }
+            }
+            +li {
+                &::before {
+                    content: url("../img/common/icn_breadcrumb-right.svg");
+                    position: absolute;
+                    left: -17px;
+                    top: calc(50% - 1px);
+                    transform: translateY(-50%);
+                    @include brSpLandscape {
+                        left: -12px;
+                        top: calc(50% - 2px);
+                        content: url("../img/common/icn_breadcrumb-right_small.svg");
+                    }
+                }
+            }
+            a {
+                font-size: 12px;
+                line-height: 15px;
+                font-weight: 400;
+                color: $cBreadcrumb;
+                .pc{
+                    @include brSpLandscape{
+                        display: none;
+                    }
+                }
+                .sp{
+                    display: none;
+                    @include brSpLandscape{
+                        display: inline-block;
+                    }
+                }
+                @include brSpLandscape {
+                    font-size: 10px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

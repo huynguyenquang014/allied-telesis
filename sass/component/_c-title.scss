@@ -1,0 +1,38 @@
+@charset "utf-8";
+.c-title {
+    text-align: center;
+    margin-top: -27px;
+    h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 87px;
+        color: $textColor;
+        position: relative;
+        font-family: $font-DM;
+        letter-spacing: 2px;
+        @include brSpLandscape {
+            font-size: 24px;
+            line-height: 56px;
+            padding-bottom: 11px;
+        }
+    }
+    p {
+        font-size: 13px;
+        font-weight: 400;
+        color: $textColor;
+        position: relative;
+        margin-top: -26px;
+        letter-spacing: 2px;
+        padding-bottom: 19px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 36px;
+            height: 4px;
+            background-color: $cBase;
+        }
+    }
+}

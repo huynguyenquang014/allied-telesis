@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+.l-header{
+    padding: 16px 0 10px;
+    background: url("../img/common/bg_header.svg") no-repeat center;
+    background-size: cover;
+    @include brSpLandscape{
+        padding-top: 11px;
+    }
+    &__logo{
+        display: flex;
+        @include brTablet{
+            img{
+                width: 180px;
+            }
+        }
+        @include brSpLandscape{
+            img{
+                width: 124px;
+            }
+        }
+        @media (max-width: 374px){
+            img{
+                width: 83px;
+            }
+        }
+    }
+    .l-container--fluid{
+        @include brSpLandscape{
+            padding-left: 21px;
+            padding-right: 21px;
+        }
+    }
+    .l-row{
+        align-items: center;
+        @include brSpLandscape{
+            .l-col-auto{
+                padding-right: 0;
+            }
+            .l-col{
+                padding-left: 0;
+            }
+        }
+    }
+    &__block-right{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &__btn{
+            font-family: "Noto sans";
+            font-size: 13px;
+            line-height: 12px;
+            font-weight: 700;
+            color: #fff;
+            background-color: $cBase;
+            min-width: 145px;
+            padding: 16px 20px;
+            text-align: center;
+            margin-left: 27px;
+            @include brTablet{
+                min-width: 100px;
+                margin-left: 8px;
+            }
+            @include brSpLandscape{
+                min-width: 68px;
+                padding: 13px 7px;
+            }
+            &-menu{
+                margin-left: 40px;
+                @include brSpLandscape{
+                    margin-left: 10px;
+                }
+                img{
+                    @include brSpLandscape{
+                        display: none;
+                    }
+                    + img{
+                        display: none;
+                        @include brSpLandscape{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

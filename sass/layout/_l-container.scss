@@ -1,0 +1,11 @@
+.l-container {
+    width: 1130px;
+    padding-left: 25px;
+    padding-right: 25px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    &--fluid {
+        width: 1450px;
+    }
+}

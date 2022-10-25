@@ -1,0 +1,17 @@
+.c-top-mv {
+    margin-top: 70px;
+    @include brSpLandscape {
+        margin-top: 60px;
+    }
+    &__pc {
+        @include brSpLandscape {
+            display: none;
+        }
+    }
+    &__sp {
+        display: none;
+        @include brSpLandscape {
+            display: block;
+        }
+    }
+}
